@@ -2,6 +2,7 @@ const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio');
 const { response } = require('express');
+// const { data } = require('cheerio/lib/api/attributes');
 
 const app = express();
 
@@ -10,27 +11,25 @@ axios('https://everynoise.com')
     .then(response => {
         const html = response.data;
         const $ = cheerio.load(html)
-        const articles=[]
-        const urls= []
 
-       const text =  $('#item1' , html).each(function(){
-            const item =  $(this).text()
-            articles.push({item})
-        })
-       console.log(typeof(text)); 
+        data = []
 
-        // $('#item1' , html).each(function(){
-        //    const url = $(this).find('div').attr('preview_url')
-        //    urls.push({url})
-        // })
+        $('.genre' , html).each(
+            function() {
+                data.push(
+                    {
+                        "at":this.attribs ,
+                        "tx": $(this).text()
+                    }
+                );
+            }
+        )
+        
+        for(let i = 0; i < data.length; i++){
+            console.log(data[i]["tx"]);
+        }
 
-        console.log(articles[0]);
-        // console.log(urls);
-
-
-    })
-
-
+    }) 
 app.listen(3000, ()=>{
     console.log(`server started successfully at port : ${3000} `);
 })
