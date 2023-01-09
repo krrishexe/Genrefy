@@ -9,7 +9,17 @@ const app = express();
 axios('https://everynoise.com')
     .then(response => {
         const html = response.data;
-        console.log(html);
+        const $ = cheerio.load(html)
+        const articles=[]
+
+        $('.genre' , html).each(function(){
+           const item =  $(this).text()
+           articles.push({item})
+        })
+
+        console.log(articles);
+
+
     })
 
 
