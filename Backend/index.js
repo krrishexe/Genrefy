@@ -11,13 +11,20 @@ axios('https://everynoise.com')
         const html = response.data;
         const $ = cheerio.load(html)
         const articles=[]
+        const urls= []
 
-        $('.genre' , html).each(function(){
+        $('#item1' , html).each(function(){
            const item =  $(this).text()
            articles.push({item})
         })
 
-        console.log(articles);
+        $('#item1' , html).each(function(){
+           const url = $(this).find('div')
+           urls.push({url})
+        })
+
+        console.log(articles[0]);
+        console.log(urls[0]);
 
 
     })
