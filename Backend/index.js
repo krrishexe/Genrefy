@@ -13,18 +13,19 @@ axios('https://everynoise.com')
         const articles=[]
         const urls= []
 
-        $('#item1' , html).each(function(){
-           const item =  $(this).text()
-           articles.push({item})
+       const text =  $('#item1' , html).each(function(){
+            const item =  $(this).text()
+            articles.push({item})
         })
+       console.log(typeof(text)); 
 
-        $('#item1' , html).each(function(){
-           const url = $(this).find('div')
-           urls.push({url})
-        })
+        // $('#item1' , html).each(function(){
+        //    const url = $(this).find('div').attr('preview_url')
+        //    urls.push({url})
+        // })
 
         console.log(articles[0]);
-        console.log(urls[0]);
+        // console.log(urls);
 
 
     })
