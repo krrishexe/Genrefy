@@ -2,6 +2,7 @@ const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio');
 const { response } = require('express');
+var fs = require('fs');
 // const { data } = require('cheerio/lib/api/attributes');
 
 const app = express();
@@ -12,7 +13,7 @@ axios('https://everynoise.com')
         const html = response.data;
         const $ = cheerio.load(html)
 
-        dataArray = []
+        let dataArray = []
 
         $('.genre' , html).each(
             function() {
@@ -25,9 +26,18 @@ axios('https://everynoise.com')
             }
         )
         
-        for(let i = 0; i < dataArray.length; i++){
-            console.log(dataArray[i]);
+        // for(let i = 0; i < dataArray.length; i++){
+        //     dataArray.push(dataArray[i])
+        //     // console.log(dataArray[i])
+        // }
+
+        console.log(dataArray);
+        const jsonData = JSON.stringify(dataArray)
+        fs.writeFile("JsonToText.json", jsonData, function(err) {
+        if (err) {
+        console.log(err);
         }
+        });
 
     }) 
 app.listen(3000, ()=>{
