@@ -12,21 +12,21 @@ axios('https://everynoise.com')
         const html = response.data;
         const $ = cheerio.load(html)
 
-        data = []
+        dataArray = []
 
         $('.genre' , html).each(
             function() {
-                data.push(
+                dataArray.push(
                     {
-                        "at":this.attribs ,
-                        "tx": $(this).text()
+                        "data":this.attribs ,
+                        "text": $(this).text()
                     }
                 );
             }
         )
         
-        for(let i = 0; i < data.length; i++){
-            console.log(data[i]["tx"]);
+        for(let i = 0; i < dataArray.length; i++){
+            console.log(dataArray[i]);
         }
 
     }) 
