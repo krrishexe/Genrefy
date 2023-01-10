@@ -33,7 +33,7 @@ axios('https://everynoise.com')
 
         console.log(dataArray);
         const jsonData = JSON.stringify(dataArray)
-        fs.writeFile("JsonToText.json", jsonData, function(err) {
+        fs.writeFile("JsonToText.json", jsonData,"utf-8" ,function(err) {
         if (err) {
         console.log(err);
         }
