@@ -4,7 +4,7 @@ html, body {
   }
   
   html {
-    background: #eeecec;
+    background: black;
     overflow-x: hidden;
   }
   
@@ -17,7 +17,7 @@ html, body {
     z-index: 111;
     cursor: pointer;
     width: 100%;
-    background: #212121;
+    background: black;
     height: 65px;
     left: 0;
     top: 0;
@@ -47,9 +47,9 @@ html, body {
   .navT .icon:after {
     top: 10px;
   }
-  .navT:hover {
+  /* .navT:hover {
     background: black;
-  }
+  } */
   .navT:hover .icon:before {
     top: -12px;
   }
@@ -118,3 +118,12 @@ html, body {
     background: #f3581b;
     border-bottom: 1px solid black;
   }
+
+/* **************Navbar ends here************* */
+
+.genrefyHero{
+  height: 100vh;
+  width: 100%;
+  aspect-ratio: calc(100%-20%);
+  object-fit:scale-down;
+}
