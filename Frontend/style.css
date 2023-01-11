@@ -1,6 +1,8 @@
 html, body {
     width: 100%;
     margin: 0px;
+    display: block;
+    box-sizing: content-box;
   }
   
   html {
@@ -23,7 +25,7 @@ html, body {
     height: 65px;
     left: 0;
     top: 0;
-    position: fixed;
+    position: relative;
   }
 
   /* ************** 3 vertical lines ************* */
@@ -135,5 +137,7 @@ html, body {
 .tn-atom {
   background-size: cover;
   position: absolute;
-  
+}
+.dump{
+  margin-top: 130px;
 }
