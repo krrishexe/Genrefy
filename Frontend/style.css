@@ -143,21 +143,20 @@ html, body {
   z-index: 5;
 }
 .dump1{
-  margin-top: 400px;
+  top: 65%;
   /* position: relative; */
   margin-left: 45px;
-  z-index: 4;
+  z-index: 6;
 }
 .dump2{
   /* height: 100vh; */
-  margin-top: 900px;
+  top: 130%;
   padding-right: 50px;
   margin-left: 42px;
-  z-index: 5;
+  z-index: 6;
 }
 .dump3{
-  margin-top: 1530px;
-  padding-right: 50px;
-  margin-left: 42px;
-  z-index: 5;
+  top: 200%;
+  margin-left: 18px;
+  z-index: 7;
 }
