@@ -13,6 +13,8 @@ html, body {
   }
   
   .navT {
+    display: flex;
+    justify-content: center;
     -webkit-transition: all 0.25s;
     z-index: 111;
     cursor: pointer;
@@ -23,6 +25,8 @@ html, body {
     top: 0;
     position: fixed;
   }
+
+  /* ************** 3 vertical lines ************* */
   .navT .icon {
     -webkit-transition: all 0.25s;
     position: absolute;
@@ -30,14 +34,14 @@ html, body {
     height: 1px;
     left: 15px;
     top: 30px;
-    background-color: white;
+    background-color: black;
   }
   .navT .icon:before, .navT .icon:after {
     -webkit-transition: all 0.25s;
     width: 30px;
     height: 1px;
     left: 0;
-    background: white;
+    background: black;
     position: absolute;
     content: "";
   }
@@ -126,4 +130,10 @@ html, body {
   width: 100%;
   aspect-ratio: calc(100%-20%);
   object-fit:scale-down;
+}
+
+.tn-atom {
+  background-size: cover;
+  position: absolute;
+  
 }
