@@ -7,7 +7,7 @@ html, body {
   
   html {
     background: black;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
   
   #container {
@@ -126,6 +126,11 @@ html, body {
   }
 
 /* **************Navbar ends here************* */
+.hero{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
 
 .genrefyHero{
   height: 100vh;
