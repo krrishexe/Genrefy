@@ -4,7 +4,10 @@ html, body {
     display: block;
     box-sizing: content-box;
   }
-  
+@font-face {
+    font-family: elixia;
+    src: url("./Media/ELIXIA") format("opentype");
+}
   html {
     background: black;
     overflow-x: hidden;
@@ -134,7 +137,15 @@ html, body {
   /* overflow-x: hidden; */
 }
 .genrefyHero{
-  font-family:;
+  font-family: elixia;
+  color: #98fe6a;
+  font-size: 300px;
+margin-left:300px;
+
+
+
+
+
   /* height: 100vh;
   width: 100%;
   aspect-ratio: calc(100%-20%);
@@ -189,4 +200,11 @@ html, body {
   /* margin-left: 18px; */
   right: 1%;
   z-index: 7;
+}
+path {
+  fill: transparent;
+}
+
+text {
+  fill: #FF9800;
 }
