@@ -1,5 +1,5 @@
 html, body {
-    width: 100%;
+    /* width: 100%; */
     margin: 0px;
     display: block;
     box-sizing: content-box;
@@ -7,7 +7,7 @@ html, body {
   
   html {
     background: black;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
   }
   
   #container {
@@ -126,12 +126,13 @@ html, body {
   }
 
 /* **************Navbar ends here************* */
-.hero{
-  display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
-}
 
+.hero{
+  width: 78%;
+  display: flex;
+  justify-content:space-between;
+  /* overflow-x: hidden; */
+}
 .genrefyHero{
   height: 100vh;
   width: 100%;
@@ -164,4 +165,12 @@ html, body {
   top: 200%;
   margin-left: 18px;
   z-index: 7;
+}
+.dump4{
+  top: 25%;
+  right: 2%;
+  z-index: 5;
+}
+.dump5{
+  
 }
