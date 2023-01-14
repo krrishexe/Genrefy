@@ -1,5 +1,6 @@
 html, body {
     /* width: 100%; */
+    color: white;
     margin: 0px;
     display: block;
     box-sizing: content-box;
@@ -7,6 +8,10 @@ html, body {
 @font-face {
     font-family: elixia;
     src: url("./Media/ELIXIA") format("opentype");
+}
+@font-face {
+    font-family: accent;
+    src: url("./Media/accent.ttf") format("opentype");
 }
   html {
     background: black;
@@ -136,16 +141,28 @@ html, body {
   justify-content:space-between;
   /* overflow-x: hidden; */
 }
-.genrefyHero{
+.genrefyMid{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 20%;
+}
+.genrefyH1{
+  margin-top: 250px;
+  margin-bottom: 0px;
   font-family: elixia;
   color: #98fe6a;
   font-size: 300px;
-margin-left:300px;
-
-  /* height: 100vh;
-  width: 100%;
-  aspect-ratio: calc(100%-20%);
-  object-fit:scale-down; */
+  /* font-weight: 700; */
+}
+.flexMid{
+  display: flex;
+  justify-content: center;
+}
+.genrefyH3{
+  font-family: accent;
+  font-size: 70px;
+  font-weight: 100;
 }
 .tn-atom {
   background-size: cover;
@@ -197,10 +214,8 @@ margin-left:300px;
   right: 1%;
   z-index: 7;
 }
-path {
-  fill: transparent;
-}
-
-text {
-  fill: #FF9800;
+.bigFont{
+  font-size: 100px;
+  font-family: elixia;
+  font-weight: 100;
 }
