@@ -243,29 +243,8 @@ html, body {
   text-align: center;
 }
 .mj{
+  margin-top: 30px;
+  margin-bottom: 0px;
   font-family: accent;
   font-size: 100px;
-}
-
-
-
-
-
-
-/* ************ Hover on links *********** */
-
-
-
-
-.one{
-  background-image: url("./Media/artists/acdcBandMembers.jpg");
-}
-.two{
-  background-image: url("./Media/artists/beatlesbandmembers.jpg");
-}
-.three{
-  background-image: url("./Media/artists/queenimg.jpg");
-}
-.four{
-  background-image: url("./Media/artists/mjImg.jpg");
 }
