@@ -164,6 +164,7 @@ html, body {
   justify-content: center;
   align-content: center;
   flex-direction: column;
+  /* position: absolute; */
 }
 .genrefyH3{
   text-align: center;
@@ -231,7 +232,7 @@ html, body {
   font-family: squealer;
   font-size: 100px;
   font-weight: 300;
-  margin-top: 80px;
+  margin-top: 0px;
   margin-bottom: 0px;
 }
 .acdcImg{
@@ -243,4 +244,27 @@ html, body {
 }
 .beatles{
   /* text-align: center; */
+}
+
+
+
+
+
+
+/* ************ Hover on links *********** */
+
+.menu-item{
+  /* border-bottom: 1px solid white; */
+}
+.one{
+  background-image: url("./Media/artists/acdcBandMembers.jpg");
+}
+.two{
+  background-image: url("./Media/artists/acdcBandMembers.jpg");
+}
+.three{
+  background-image: url("./Media/artists/acdcBandMembers.jpg");
+}
+.four{
+  background-image: url("./Media/artists/acdcBandMembers.jpg");
 }
