@@ -242,8 +242,8 @@ html, body {
 .tcCenter{
   text-align: center;
 }
-.beatles{
-  /* text-align: center; */
+.mj{
+  font-family: accent;
 }
 
 
@@ -260,10 +260,10 @@ html, body {
   background-image: url("./Media/artists/acdcBandMembers.jpg");
 }
 .two{
-  background-image: url("./Media/artists/acdcBandMembers.jpg");
+  background-image: url("./Media/artists/beatlesbandmembers.jpg");
 }
 .three{
-  background-image: url("./Media/artists/acdcBandMembers.jpg");
+  background-image: url("./Media/artists/queenimg.jpg");
 }
 .four{
   background-image: url("./Media/artists/acdcBandMembers.jpg");
