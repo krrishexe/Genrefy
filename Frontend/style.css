@@ -244,6 +244,7 @@ html, body {
 }
 .mj{
   font-family: accent;
+  font-size: 100px;
 }
 
 
@@ -253,9 +254,9 @@ html, body {
 
 /* ************ Hover on links *********** */
 
-.menu-item{
-  /* border-bottom: 1px solid white; */
-}
+
+
+
 .one{
   background-image: url("./Media/artists/acdcBandMembers.jpg");
 }
@@ -266,5 +267,5 @@ html, body {
   background-image: url("./Media/artists/queenimg.jpg");
 }
 .four{
-  background-image: url("./Media/artists/acdcBandMembers.jpg");
+  background-image: url("./Media/artists/mjImg.jpg");
 }
