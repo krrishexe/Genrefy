@@ -26,7 +26,7 @@ $(".navT").on("click", function(){
   
         `
   
-               <div class="songName" style = "${song.data.style}" onclick = ${song.data.onclick} > ${song.text} </div>
+               <div id= "${song.data.id}" class="songName" style = "${song.data.style}" onclick = ${song.data.onclick} > ${song.text} </div>
          
         `;
       }
@@ -37,7 +37,42 @@ $(".navT").on("click", function(){
   Func();
 
 
-  
+  function playx(key, genre, me) {
+    window.clearTimeout(nowpending);
+    var spotifyplayer = document.getElementById('spotifyplayer');
+    if (nowplaying == genre) {
+        spotifyplayer.pause();
+        highlight('');
+        nowplaying = '';
+        document.getElementById('scan').innerText = 'scan';
+    } else {
+        previewurl = me.getAttribute('preview_url')
+        if (!previewurl && key) {
+            previewurl = getpreviewurl(key);
+        }
+        if (previewurl) {
+            spotifyplayer.src = previewurl;
+            spotifyplayer.play();
+            me.setAttribute('played', clicknumber++);
+            nowplaying = genre;
+            highlight(genre);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // let http = new XMLHttpRequest();
 
