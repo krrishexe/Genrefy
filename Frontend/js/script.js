@@ -10,6 +10,15 @@ $(".navT").on("click", function(){
     document.getElementById("playsong").play();
   }
 
+var audioTag = document.getElementById('audioTag');
+
+
+function playBoy(url, id){
+  audioTag.innerHTML = `<audio id="" controls="" autoplay="" name="media"><source src="${url}" type="audio/mpeg"></audio>`
+
+  var idTag = document.getElementById(id);
+  idTag.style.color = "white"
+}
 
 
   function Func() {
@@ -21,48 +30,28 @@ $(".navT").on("click", function(){
         console.log(data);
 
       for(let song of data["results"].slice(0,100)){
+        var x = Math.random();
+        var y = x*100;
+        var z = y.toFixed(0);
 
         document.getElementById("songs").innerHTML += 
   
         `
   
-               <div id= "${song.data.id}" class="songName" style = "${song.data.style}" onclick = ${song.data.onclick} > ${song.text} </div>
+               <div id= "${song.data.id}" class="songName" style = "font-size:${z}px" > ${song.text} 
+                
+               <div onclick = 'playBoy(\"${song.data.preview_url}\","${song.data.id}")'>play</div>
+                ${z}
+               </div>
          
         `;
       }
       
+
     }) 
   };
   
   Func();
-
-
-  function playx(key, genre, me) {
-    window.clearTimeout(nowpending);
-    var spotifyplayer = document.getElementById('spotifyplayer');
-    if (nowplaying == genre) {
-        spotifyplayer.pause();
-        highlight('');
-        nowplaying = '';
-        document.getElementById('scan').innerText = 'scan';
-    } else {
-        previewurl = me.getAttribute('preview_url')
-        if (!previewurl && key) {
-            previewurl = getpreviewurl(key);
-        }
-        if (previewurl) {
-            spotifyplayer.src = previewurl;
-            spotifyplayer.play();
-            me.setAttribute('played', clicknumber++);
-            nowplaying = genre;
-            highlight(genre);
-        }
-    }
-}
-
-
-
-
 
 
 

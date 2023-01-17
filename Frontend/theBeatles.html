@@ -10,7 +10,7 @@
 <body>
     
     <div class="wrapper"></div>
-    <div class="hero-title"></div>
+    <div class="hero-title"><img src="./Media/artists/beatles.jpg" alt=""></div>
 
 
 
@@ -18,8 +18,18 @@
 
 
 
-    <script src="three.min.js"></script>
-    <script src="TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.148.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="dist/hover.umd.js"></script>
+
+    <script>
+    var hoverDistort = new hoverEffect({
+    parent : document.querySelector('.wrapper'),
+    intensity:0.5,
+    image1:'../Media/hover/img-2.jpg',
+    image2:'../Media/hover/img-1.jpg',
+    displacementImage:'../Media/hover/img-3.jpg'
+})
+    </script>
 </body>
 </html>

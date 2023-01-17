@@ -254,3 +254,6 @@ html, body {
   position:initial;
   /* margin-top: 200vh; */
 }
+audio{
+  /* display: none; */
+}
