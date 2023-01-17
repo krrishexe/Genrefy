@@ -3,7 +3,7 @@ html, body {
     color: white;
     margin: 0px;
     display: block;
-    box-sizing: content-box;
+    box-sizing: border-box;
   }
 @font-face {
     font-family: elixia;
@@ -141,6 +141,7 @@ html, body {
 
 .hero{
   width: 78%;
+  height:230vh;
   display: flex;
   justify-content:space-between;
   /* overflow-x: hidden; */
@@ -250,6 +251,6 @@ html, body {
 }
 
 #songs{
-  position: relative;
-  
+  position:initial;
+  /* margin-top: 200vh; */
 }

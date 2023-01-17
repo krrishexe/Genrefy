@@ -24,19 +24,20 @@ $(".navT").on("click", function(){
 
         document.getElementById("songs").innerHTML += 
   
-        `<div class = "song">
+        `
   
-  
-               <a class="songName"> ${song.text} </a>
-        
+               <div class="songName" style = "${song.data.style}" onclick = ${song.data.onclick} > ${song.text} </div>
          
-        </div>`;
+        `;
       }
       
     }) 
   };
   
   Func();
+
+
+  
 
 // let http = new XMLHttpRequest();
 
