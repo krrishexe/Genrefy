@@ -5,8 +5,13 @@ html,body{
     margin: 0;
     width: 100%;
     height: 100vh;
-    background:#161616;
-    overflow: hidden;
+    background: #EEEEEE;
+    /* background:#161616; */
+    /* overflow: hidden; */
+}
+.setHeight{
+    height: 80vh;
+    background:#3C2A21;
 }
 h1{
     margin: 0;
@@ -16,5 +21,43 @@ h1{
     transform: translate(-50%,-50%);
     color: white;
     font-family: 'Advent Pro', sans-serif;
-    font-size: 100%;
+    font-size: 100px;
 }
+.content{
+    color: black;
+}
+
+
+.img{
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    transition-timing-function: ease-out;
+}
+
+.img-1{
+    background: url("./Media/hover/img-2.jpg") no-repeat 50% 50%; 
+    transition-duration:1000ms ;
+    background-size: cover;
+}
+.img-2{
+    background: url("./Media/hover/img-1.jpg") no-repeat 50% 50%; 
+    transition-duration:800ms ;
+    background-size: cover;
+}
+.img-3{
+    background: url("./Media/hover/img-3.jpg") no-repeat 50% 50%; 
+    transition-duration:600ms ;
+    background-size: cover;
+}
+.img-4{
+    background: url("./Media/hover/img-4.jpg") no-repeat 50% 50%; 
+    transition-duration:400ms ;
+    background-size: cover;
+}
+.img-5{
+    background: url("./Media/hover/img-5.jpg") no-repeat 50% 50%; 
+    transition-duration:200ms ;
+    background-size: cover;
+}
+
