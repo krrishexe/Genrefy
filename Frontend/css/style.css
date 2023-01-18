@@ -137,7 +137,7 @@ html, body {
     border-bottom: 1px solid black;
   }
 
-/* **************Navbar ends here************* */
+/* ************** Navbar ends here ************* */
 
 .hero{
   width: 78%;
@@ -249,11 +249,13 @@ html, body {
   font-family: accent;
   font-size: 100px;
 }
-
-#songs{
-  /* display: flex; */
-  text-align: center;
+.menu-item{
+  cursor: pointer;
 }
+/* #songs{
+  text-align: center;
+} */
 #audioTag{
   text-align: center;
+  margin: 50px;
 }

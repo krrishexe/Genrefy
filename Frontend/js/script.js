@@ -45,15 +45,23 @@ function playBoy(url, id){
     var y = x*100;
     var z = y.toFixed(0);
 
+    var idname = `${song.data.id}`
+    var idname1 = idname.slice(4)
 
     const arr = ["left","right"];
-    var a = Math.floor(Math.random(0,100)*2);
+    var a ;
+    if(((idname1) % 2 )==0){
+      a = 0;
+    }else{
+      a=1
+    }
+
 
         document.getElementById("songs").innerHTML += 
   
         `
         <div onclick = 'playBoy(\"${song.data.preview_url}\","${song.data.id}")'>
-               <a id= "${song.data.id}" class="songName" style = " display:run-in; color:${arrColors[colors]} ;writing-mode: horizontal-lr;font-size:${z}px "> ${(song.text).slice(0,-2)} ▶
+               <a id= "${song.data.id}" class="songName" style = "width:100%; display:grid; color:${arrColors[colors]} ;writing-mode: horizontal-lr;font-size:${z}px ;float:${arr[a]}"> ${(song.text).slice(0,-2)} ▶
                 
 
                </a> 
@@ -74,7 +82,7 @@ function playBoy(url, id){
 
 
 
-  // ;float:${arr[a]}
+  
 
 
 // let http = new XMLHttpRequest();
