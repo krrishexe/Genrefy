@@ -21,6 +21,12 @@ function playBoy(url, id){
 }
 
 
+
+
+
+
+
+
   function Func() {
     fetch("./json-cleaner.json")
       .then((res) => {
@@ -30,20 +36,28 @@ function playBoy(url, id){
         console.log(data);
 
       for(let song of data["results"].slice(0,100)){
-        var x = Math.random();
-        var y = x*100;
-        var z = y.toFixed(0);
+
+    const arrColors = ["#0081C9","#5BC0F8","#86E5FF","#FFC93C","#FF7B54","#FF78F0","#C780FA","#FAD3E7","#ECECEC","#FF0032"]
+    
+    var colors = Math.floor(Math.random()*arrColors.length);
+
+    var x = Math.random();
+    var y = x*100;
+    var z = y.toFixed(0);
+
+
+    const arr = ["left","right"];
+    var a = Math.floor(Math.random(0,100)*2);
 
         document.getElementById("songs").innerHTML += 
   
         `
-  
-               <div id= "${song.data.id}" class="songName" style = "font-size:${z}px" > ${song.text} 
+        <div onclick = 'playBoy(\"${song.data.preview_url}\","${song.data.id}")'>
+               <a id= "${song.data.id}" class="songName" style = " display:content; color:${arrColors[colors]} ;writing-mode: horizontal-lr;font-size:${z}px ; float:${arr[a]}" > ${song.text} 
                 
-               <div onclick = 'playBoy(\"${song.data.preview_url}\","${song.data.id}")'>play</div>
-                ${z}
-               </div>
-         
+
+               </a> 
+        </div>
         `;
       }
       

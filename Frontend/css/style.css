@@ -244,6 +244,8 @@ html, body {
   text-align: center;
 }
 .mj{
+  display:;
+  
   margin-top: 30px;
   margin-bottom: 0px;
   font-family: accent;
