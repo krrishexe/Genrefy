@@ -53,7 +53,7 @@ function playBoy(url, id){
   
         `
         <div onclick = 'playBoy(\"${song.data.preview_url}\","${song.data.id}")'>
-               <a id= "${song.data.id}" class="songName" style = " display:content; color:${arrColors[colors]} ;writing-mode: horizontal-lr;font-size:${z}px ; float:${arr[a]}" > ${song.text} 
+               <a id= "${song.data.id}" class="songName" style = " display:run-in; color:${arrColors[colors]} ;writing-mode: horizontal-lr;font-size:${z}px "> ${(song.text).slice(0,-2)} ▶
                 
 
                </a> 
@@ -74,7 +74,7 @@ function playBoy(url, id){
 
 
 
-
+  // ;float:${arr[a]}
 
 
 // let http = new XMLHttpRequest();

@@ -243,9 +243,7 @@ html, body {
 .tcCenter{
   text-align: center;
 }
-.mj{
-  display:;
-  
+.mj{  
   margin-top: 30px;
   margin-bottom: 0px;
   font-family: accent;
@@ -253,9 +251,9 @@ html, body {
 }
 
 #songs{
-  position:initial;
-  /* margin-top: 200vh; */
+  /* display: flex; */
+  text-align: center;
 }
-audio{
-  /* display: none; */
+#audioTag{
+  text-align: center;
 }
