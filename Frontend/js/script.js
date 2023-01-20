@@ -28,7 +28,7 @@ function playBoy(url, id){
 
 
   function Func() {
-    fetch("./json-cleaner.json")
+    fetch("./json-cleaner.json")       // https://localhost:3000 , {mode:'no-cors}
       .then((res) => {
         return res.json();
       })
