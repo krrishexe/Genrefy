@@ -17,8 +17,9 @@ function playBoy(url, id) {
 
 
 function Func() {
-  fetch("./json-cleaner.json")       // https://localhost:3000 , {mode:'no-cors}
+  fetch("http://localhost:3000/api",{mode:'no-cors'})       // https://localhost:3000 , {mode:'no-cors}
     .then((res) => {
+      console.log(res.json());
       return res.json();
     })
     .then((data) => {
@@ -41,10 +42,9 @@ function Func() {
         }
         document.getElementById("songs").innerHTML +=
 
-          `
+      `
       <div onclick = 'playBoy(\"${song.data.preview_url}\","${song.data.id}")'>
              <a id= "${song.data.id}" class="songName" style = "width:100%; display:grid; color:${arrColors[colors]} ;writing-mode: horizontal-lr;font-size:${z}px ;float:${arr[a]}"> ${(song.text).slice(0, -2)} ▶
-              
              </a> 
       </div>
       `;
