@@ -26,7 +26,7 @@ function Func() {
       console.log(data);
       for (let song of data["results"].slice(0, 100)) {
         const arrColors = ["#0081C9", "#5BC0F8", "#86E5FF", "#FFC93C", "#FF7B54", "#FF78F0", "#C780FA", "#FAD3E7", "#ECECEC", "#FF0032"]
-
+        const arrFonts = ['Aboreto','Explora','Unbounded','Libre Baskerville','Dancing Script','Indie Flower']
         var colors = Math.floor(Math.random() * arrColors.length);
         var x = Math.random();
         var y = x * 100;
@@ -44,7 +44,7 @@ function Func() {
 
       `
       <div onclick = 'playBoy(\"${song.data.preview_url}\","${song.data.id}")'>
-             <a id= "${song.data.id}" class="songName" style = "width:100%; display:grid; color:${arrColors[colors]} ;writing-mode: horizontal-lr;font-size:${z}px ;float:${arr[a]}"> ${(song.text).slice(0, -2)} ▶
+             <a id= "${song.data.id}" class="songName" style = "width:100%; display:grid; font-family:${arrFonts[colors]} color:${arrColors[colors]} ;writing-mode: horizontal-lr;font-size:${z}px ;float:${arr[a]}"> ${(song.text).slice(0, -2)} ▶
              </a> 
       </div>
       `;
