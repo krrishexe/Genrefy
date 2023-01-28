@@ -2,12 +2,30 @@ $(".navT").on("click", function () {
   $(this).toggleClass("active");
   $("#menu").toggleClass("open");
   $(".content").toggleClass("shift");
-
-
 })
+
+$(document).ready(function () {
+  'use strict';
+  $('button').on('click', function () {
+     $('html').animate({
+         scrollTop: 0
+     }, 1000);
+  });
+  $(window).on('scroll', function () {
+     if ($(window).scrollTop() > 400) {
+         $('button').fadeIn();
+     } else {
+         $('button').fadeOut();
+     }
+  });
+});
+
+
+
 window.onload = function () {
   document.getElementById("playsong").play();
 }
+
 var audioTag = document.getElementById('audioTag');
 function playBoy(url, id) {
   audioTag.innerHTML = `<audio id="" controls="" autoplay="" name="media"><source src="${url}" type="audio/mpeg"></audio>`
@@ -17,10 +35,10 @@ function playBoy(url, id) {
 
 
 function Func() {
-  fetch("../json-cleaner.json",{mode:'no-cors'})       // http://localhost:3000/api , {mode:'no-cors}
+  fetch("../json-cleaner.json")       // http://localhost:3000/api , {mode:'no-cors}
     .then((res) => {
-      console.log(res.json());
-      return res.json();
+      // console.log(res.json());
+       return res.json();
     })
     .then((data) => {
       console.log(data);
