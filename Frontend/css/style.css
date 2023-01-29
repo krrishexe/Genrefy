@@ -32,7 +32,11 @@ html, body {
   #container {
     z-index: 111;
   }
-  
+  a{
+    text-decoration: none;
+    color: white;
+    font-family: squealer;
+  }
   .navT {
     display: flex;
     justify-content: center;
@@ -277,15 +281,14 @@ html, body {
 }
 
 #songs{
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-
+  
 }
-#audioTag{
-  /* text-align: center; */
+div #audioTag{
+  position: sticky;
+  top: 20px;
   margin: 30px;
 }
 audio{
   height: 40px;
+  
 }

@@ -1,8 +1,13 @@
+                    // NAVBAR CLASS CHANGING USING JQUERY
+
 $(".navT").on("click", function () {
   $(this).toggleClass("active");
   $("#menu").toggleClass("open");
   $(".content").toggleClass("shift");
 })
+
+
+                    // SCROLL TO TOP bUTTON USING JQUERY
 
 $(document).ready(function () {
   'use strict';
@@ -19,7 +24,16 @@ $(document).ready(function () {
     }
   });
 });
+            
+                  // ADUIO TAG POSITIONING USING JQUERY
 
+var initTopPosition= $('#audioTag').offset().top;   
+$(window).scroll(function(){
+    if($(window).scrollTop() > initTopPosition)
+        $('#audioTag').css({'position':'fixed','top':'0px'});
+    else
+        $('#audioTag').css({'position':'absolute','top':initTopPosition+'px'});
+});
 
 
 window.onload = function () {
