@@ -262,6 +262,8 @@ html, body {
   text-align: center;
 }
 .btnTop{
+  position: relative;
+  z-index: 500;
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid white;
@@ -273,6 +275,7 @@ html, body {
   bottom: 10px;
   right: 50px;
 }
+
 #songs{
   position: -webkit-sticky;
   position: sticky;
