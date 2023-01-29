@@ -11,6 +11,7 @@ html, body {
     margin: 0px;
     display: block;
     box-sizing: border-box;
+    scroll-behavior:calc(100%-50%);
   }
 @font-face {
     font-family: elixia;
@@ -279,16 +280,58 @@ html, body {
   bottom: 10px;
   right: 50px;
 }
-
 #songs{
-  
+  margin-top: 50px;
 }
 div #audioTag{
-  position: sticky;
-  top: 20px;
-  margin: 30px;
+  /* background-color: rgba(1, 1, 1, 0.2); */
+  background:linear-gradient(to bottom ,rgba(1, 1, 1, 1) ,rgba(1, 1, 1, 0.8),rgba(1, 1, 1, 0));
+  /* opacity: 60%; */
+  backdrop-filter: blur(1px);
+  /* text-align: center;
+  padding: 30px; */
+  width: 100%;
 }
-audio{
-  height: 40px;
-  
+#innerAudio{
+  color: green;
+  height: 70px;
+  width: 100%;
+}
+#innerAudio::-webkit-media-controls-panel{
+  /* --player-button-width: 34px; */
+  width: 100%;
+  border-radius: 0;
+  /* background-color: #98fe6a; */
+  /* background-color: rgba(1, 1, 1); */
+  /* opacity: 0%; */
+}
+#innerAudio::-webkit-media-controls-play-button{
+  background-color: #98fe6a;
+  border: 1px solid white;
+  border-radius: 50%;
+  transform: scale(1.5);
+}
+#innerAudio::-webkit-media-controls-timeline{
+  background-color: rgb(152,254,106);
+  color: white;
+  height: 3px;
+  padding: 0;
+  opacity: 100%;
+}
+
+#innerAudio::-webkit-media-controls-volume-slider{
+visibility: hidden;
+}
+
+#innerAudio::-webkit-media-controls-current-time-display, #innerAudio::-webkit-media-controls-time-remaining-display{
+  visibility:hidden ;
+  color: white;
+}
+#innerAudio::-webkit-media-controls-enclosure {
+  width: 80%;
+  /* border: 1px solid white; */
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+  /* background:linear-gradient(to bottom ,rgba(1, 1, 1, 1) ,rgba(1, 1, 1, 0)); */
+
 }

@@ -42,7 +42,7 @@ window.onload = function () {
 
 var audioTag = document.getElementById('audioTag');
 function playBoy(url, id) {
-  audioTag.innerHTML = `<audio id="" controls="" autoplay="" name="media"><source src="${url}" type="audio/mpeg"></audio>`
+  audioTag.innerHTML = `<audio id="innerAudio" controls="" autoplay="" name="media"><source src="${url}" type="audio/mpeg"></audio>`
   var idTag = document.getElementById(id);
   idTag.style.color = "white"
 }
