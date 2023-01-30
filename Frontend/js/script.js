@@ -35,10 +35,13 @@ $(window).scroll(function () {
     $('#audioTag').css({ 'position': 'absolute', 'top': initTopPosition + 'px' });
 });
 
+// PLAYING THE SONG ON WINDOW LOAD
 
 window.onload = function () {
   document.getElementById("playsong").play();
 }
+
+//  playing the song onclick
 
 var audioTag = document.getElementById('audioTag');
 function playBoy(url, id) {
@@ -47,9 +50,40 @@ function playBoy(url, id) {
   idTag.style.color = "white"
 }
 
+// SHUFFLING THE ARRAY SO THAT WE GET DIFFERENT 100 ITEMS EVERYTIME THE SCREEN LOAD.
+
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
+
+window.addEventListener('scroll',()=>{
+
+  const {scrollTop,scrollHeight,clientHeight } = document.documentElement;
+  console.log({scrollTop,scrollHeight,clientHeight});
+
+  if(clientHeight + scrollTop >= scrollHeight - 200){
+    console.log("to the bottom");
+    // show the loading animation once 
+    showLoading();
+  }
+
+})
+
+  // getting the loader class and adding the show class to it.
+  const loading = document.querySelector('.loading')
+  function showLoading(){
+    // animation visible 
+    loading.classList.add('show');
+    // loading more data once it reaches to the bottom
+    setTimeout(() => {
+      
+      Func();
+    }, 1000);
+
+  }
+
+
+
 
 function Func() {
   fetch("../json-cleaner.json")       // http://localhost:3000/api , {mode:'no-cors}
@@ -94,7 +128,7 @@ function Func() {
       </div>
       `;
       }
-
+      loading.classList.remove('show');
     })
 };
 
