@@ -38,9 +38,7 @@ html, body {
     color: white;
     font-family: squealer;
   }
-  a::hover{
-    
-  }
+  
   .navT {
     display: flex;
     justify-content: center;
@@ -170,7 +168,7 @@ html, body {
   margin-top: 250px;
   margin-bottom: 0px;
   font-family: elixia;
-  color: #fff;
+  color: #BFBDBF;
   font-size: 300px;
   animation: flicker 1.5s infinite alternate;
   font-weight: 300;
@@ -181,14 +179,14 @@ html, body {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
 
       text-shadow:
-      0 0 4px #fff,
-      0 0 11px #fff,
-      0 0 19px #fff,
-      0 0 40px #0fa,
-      0 0 80px #0fa,
-      0 0 90px #0fa,
-      0 0 100px #0fa,
-      0 0 150px #0fa;
+      0 0 4px #000,
+      0 0 11px #000,
+      0 0 19px #000,
+      0 0 40px #fff,
+      0 0 80px #fff,
+      0 0 90px #fff,
+      0 0 100px #fff,
+      0 0 150px #fff;
   
   }
   

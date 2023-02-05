@@ -56,12 +56,12 @@ function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
 
-window.addEventListener('scroll',()=>{
+window.addEventListener('scroll', () => {
 
-  const {scrollTop,scrollHeight,clientHeight } = document.documentElement;
-  console.log({scrollTop,scrollHeight,clientHeight});
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+  // console.log({ scrollTop, scrollHeight, clientHeight });
 
-  if(clientHeight + scrollTop >= scrollHeight - 200){
+  if (clientHeight + scrollTop >= scrollHeight - 200) {
     console.log("to the bottom");
     // show the loading animation once 
     showLoading();
@@ -69,18 +69,18 @@ window.addEventListener('scroll',()=>{
 
 })
 
-  // getting the loader class and adding the show class to it.
-  const loading = document.querySelector('.loading')
-  function showLoading(){
-    // animation visible 
-    loading.classList.add('show');
-    // loading more data once it reaches to the bottom
-    setTimeout(() => {
-      
-      Func();
-    }, 1000);
+// getting the loader class and adding the show class to it.
+const loading = document.querySelector('.loading')
+function showLoading() {
+  // animation visible 
+  loading.classList.add('show');
+  // loading more data once it reaches to the bottom
+  setTimeout(() => {
 
-  }
+    Func();
+  }, 1000);
+
+}
 
 
 
@@ -92,7 +92,7 @@ function Func() {
       return res.json();
     })
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       var songs = data["results"];
       shuffle(songs)
       for (let song of songs.slice(0, 100)) {
