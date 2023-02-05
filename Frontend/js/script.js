@@ -82,7 +82,7 @@ function showLoading() {
 
 }
 
-
+//all the main logic
 
 
 function Func() {
@@ -97,12 +97,12 @@ function Func() {
       shuffle(songs)
       for (let song of songs.slice(0, 100)) {
         const arrColors = ["#0081C9", "#5BC0F8", "#86E5FF", "#ffe53c", "#FF7B54", "#FF78F0", "#C780FA", "#B05A7A", "#E0144C", "#BFDB38", "#B9F3FC", "#FEDEFF", "#B05A7A", "#9DF1DF", "#FCFFE7"]
-        const arrFonts = ['Aboreto', 'Explora', 'Unbounded', 'Libre Baskerville', 'Dancing Script', 'Indie Flower', 'Bebas Neue',]
+        const arrFonts = ['Aboreto', 'Explora', 'Unbounded', 'Libre Baskerville', 'Dancing Script', 'Indie Flower', 'Bebas Neue','Raleway Dots']
         var colors = Math.floor(Math.random() * arrColors.length);
         var x = Math.random();
         var y = x * 60;
         var z = Number(y.toFixed(0)) + Number(10);
-        console.log(z);
+        // console.log(z);
         var idname = `${song.data.id}`
         var idname1 = idname.slice(4)
         const arr = ["left", "right"];
