@@ -96,7 +96,7 @@ function Func() {
       var songs = data["results"];
       shuffle(songs)
       for (let song of songs.slice(0, 100)) {
-        const arrColors = ["#0081C9", "#5BC0F8", "#86E5FF", "#ffe53c", "#FF7B54", "#FF78F0", "#C780FA", "#FAD3E7", "#E0144C", "#BFDB38", "#B9F3FC", "#FEDEFF", "#B05A7A", "#9DF1DF", "#FCFFE7"]
+        const arrColors = ["#0081C9", "#5BC0F8", "#86E5FF", "#ffe53c", "#FF7B54", "#FF78F0", "#C780FA", "#B05A7A", "#E0144C", "#BFDB38", "#B9F3FC", "#FEDEFF", "#B05A7A", "#9DF1DF", "#FCFFE7"]
         const arrFonts = ['Aboreto', 'Explora', 'Unbounded', 'Libre Baskerville', 'Dancing Script', 'Indie Flower', 'Bebas Neue',]
         var colors = Math.floor(Math.random() * arrColors.length);
         var x = Math.random();
