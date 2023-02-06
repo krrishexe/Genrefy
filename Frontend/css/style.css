@@ -412,4 +412,27 @@ visibility: hidden;
 		transform: translateY(-10px);
 	}
 }
-
+@media only screen and (max-width: 600px) {
+  .pillars2{
+    /* height: 100vh; */
+    margin-right: -500px;
+  }
+  .dump4{
+    margin-right: -700px;
+  }
+  .dump5{
+    margin-right: -700px;
+  }
+  .dump6{
+    margin-right: -700px;
+  }
+  .dump7{
+    margin-right: -700px;
+  }
+  #songs{
+    margin-left: 300px;
+  }
+  #innerAudio{
+    margin-left: 200px;
+  }
+}
