@@ -15,7 +15,7 @@ html, body {
     box-sizing: border-box;
     scroll-behavior:calc(100%-50%);
   }
-@font-face {
+/* @font-face {
     font-family: elixia;
     src: url("./Media/Fonts/ELIXIA.ttf") format("opentype");
 }
@@ -26,12 +26,14 @@ html, body {
 @font-face {
     font-family: squealer;
     src: url("./Media/Fonts/Squealer.otf") format("opentype");
-}
+} */
   html {
     background: black;
     overflow-x: hidden;
   }
-  
+  ::selection{
+    background-color:#fff ;
+  }
   #container {
     z-index: 111;
   }
@@ -39,8 +41,11 @@ html, body {
     text-decoration: none;
     color: white;
     font-family: squealer;
+    transition: .1s ease-in;
   }
-  
+  a:hover{
+    transform: scale(1.1);
+  }
   .navT {
     display: flex;
     justify-content: center;
@@ -413,9 +418,13 @@ visibility: hidden;
 	}
 }
 @media only screen and (max-width: 600px) {
+  .pillars{
+    margin-top: 20px;
+  }
   .pillars2{
     /* height: 100vh; */
     margin-right: -500px;
+    margin-top: 20px;
   }
   .dump4{
     margin-right: -700px;
